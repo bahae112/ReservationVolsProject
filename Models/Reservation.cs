@@ -13,5 +13,7 @@ namespace reservation_vols.Models
         [ForeignKey("volId")]
         public Vol vol { get; set; }
 
+        public string Statut { get; set; } = "En attente";
+
     }
 }

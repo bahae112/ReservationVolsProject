@@ -1,0 +1,38 @@
+﻿@model dynamic
+
+<p class="text-center text-light fs-3 p-4 bg-info rounded shadow-lg border border-white">
+    📊 Statistiques des Vols
+</p>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-white bg-primary shadow-lg">
+                <div class="card-header">✈️ Total des Vols</div>
+                <div class="card-body text-center">
+                    <h3>@Model.TotalVols</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-success shadow-lg">
+                <div class="card-header">📌 Total des Réservations</div>
+                <div class="card-body text-center">
+                    <h3>@Model.TotalReservations</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-white bg-danger shadow-lg">
+                <div class="card-header">🚫 Total des Annulations</div>
+                <div class="card-body text-center">
+                    <h3>@Model.TotalAnnulations</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a asp-action="Index" class="btn btn-secondary">⬅️ Retour</a>
+</div>

@@ -6,6 +6,6 @@ namespace reservation_vols.Models
     {
         
         public string TypeClient { get; set; }
-        public List<Reservation> Reservations { get; set; }
+        public List<Reservation> Reservations { get; set; } = new List<Reservation>();
     }
 }

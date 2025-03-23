@@ -1,0 +1,47 @@
+﻿@model List<reservation_vols.Models.Vol>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Vols</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-4">
+
+    <h2 class="mb-3">Gestion des Vols</h2>
+
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Destination</th>
+                <th>Départ</th>
+                <th>Date de départ</th>
+                <th>Date d'arrivée</th>
+                <th>Prix</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vol in Model)
+            {
+                <tr>
+                    <td>@vol.Id</td>
+                    <td>@vol.destination</td>
+                    <td>@vol.départ</td>
+                    <td>@vol.dateDepart.ToShortDateString()</td>
+                    <td>@vol.dateArrivee.ToShortDateString()</td>
+                    <td>@vol.prix €</td>
+                    <td>
+                        <a href="/Gestionnaire/Edit/@vol.Id" class="btn btn-warning btn-sm">Modifier</a>
+                        <a href="/Gestionnaire/Delete/@vol.Id" class="btn btn-danger btn-sm">Supprimer</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

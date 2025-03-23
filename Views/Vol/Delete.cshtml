@@ -1,0 +1,56 @@
+﻿@model reservation_vols.Models.Vol
+
+<div class="container mt-4">
+    <h1 class="text-center text-danger">🛑 Supprimer un vol</h1>
+
+    <div class="alert alert-warning text-center">
+        <strong>⚠️ Attention :</strong> Cette action est irréversible. Voulez-vous vraiment supprimer ce vol ?
+    </div>
+
+    <form method="post">
+        <div class="mb-3">
+            <label asp-for="départ" class="form-label fw-bold">Départ</label>
+            <input asp-for="départ" class="form-control" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="destination" class="form-label fw-bold">Destination</label>
+            <input asp-for="destination" class="form-control" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="dateDepart" class="form-label fw-bold">Date de départ</label>
+            <input asp-for="dateDepart" class="form-control" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="dateArrivee" class="form-label fw-bold">Date d'arrivée</label>
+            <input asp-for="dateArrivee" class="form-control" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="nombrePalces" class="form-label fw-bold">Nombre de places</label>
+            <input asp-for="nombrePalces" class="form-control" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="prix" class="form-label fw-bold">Prix (€)</label>
+            <input asp-for="prix" class="form-control" disabled />
+        </div>
+
+        <div class="d-flex justify-content-center gap-3">
+            <button type="submit" class="btn btn-danger fw-bold">
+                🗑️ Supprimer le vol
+            </button>
+            <a asp-controller="Vol" asp-action="Index" class="btn btn-outline-secondary">
+                ⬅️ Retour à la liste
+            </a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

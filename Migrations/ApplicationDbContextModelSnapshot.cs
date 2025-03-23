@@ -234,6 +234,10 @@ namespace reservation_vols.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Statut")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("clientId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -281,6 +285,28 @@ namespace reservation_vols.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Vols");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            dateArrivee = new DateTime(2024, 8, 15, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            dateDepart = new DateTime(2024, 8, 15, 14, 30, 0, 0, DateTimeKind.Unspecified),
+                            destination = "Paris",
+                            départ = "Casablanca",
+                            nombrePalces = 150,
+                            prix = 1200f
+                        },
+                        new
+                        {
+                            Id = 2,
+                            dateArrivee = new DateTime(2024, 9, 10, 16, 0, 0, 0, DateTimeKind.Unspecified),
+                            dateDepart = new DateTime(2024, 9, 10, 8, 0, 0, 0, DateTimeKind.Unspecified),
+                            destination = "New York",
+                            départ = "Marrakech",
+                            nombrePalces = 200,
+                            prix = 4500f
+                        });
                 });
 
             modelBuilder.Entity("reservation_vols.Models.Client", b =>
@@ -304,6 +330,38 @@ namespace reservation_vols.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Clients", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "C1",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "16b48d58-1638-4daa-baeb-73722576b0ef",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "a6b92b32-d2c1-40bf-8f77-80125b9db9a9",
+                            TwoFactorEnabled = false,
+                            CIN = "AB123456",
+                            Nom = "El Amrani",
+                            Prenom = "Yassine",
+                            TypeClient = "VIP"
+                        },
+                        new
+                        {
+                            Id = "C2",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "bf880c7c-58fa-43fc-baaa-4345da50bbd3",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "f8eb39ef-fdae-4122-8331-d05147eead15",
+                            TwoFactorEnabled = false,
+                            CIN = "CD789012",
+                            Nom = "Bennani",
+                            Prenom = "Sofia",
+                            TypeClient = "Régulier"
+                        });
                 });
 
             modelBuilder.Entity("reservation_vols.Models.Gestionnaire", b =>
