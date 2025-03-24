@@ -13,9 +13,9 @@ using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("reservation_vols")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21f6a3856e5569ed7177af9e332bf0873585b940")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+841371aeddf3a5590e03da19fb6ca6c28e3e035f")]
 [assembly: System.Reflection.AssemblyProductAttribute("reservation_vols")]
 [assembly: System.Reflection.AssemblyTitleAttribute("reservation_vols")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
