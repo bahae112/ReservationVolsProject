@@ -1,1 +1,4 @@
--e "obj/\nbin/" 
+
+.vs/
+bin/
+obj/

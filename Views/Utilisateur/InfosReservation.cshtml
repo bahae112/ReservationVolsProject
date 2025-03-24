@@ -1,0 +1,67 @@
+﻿@model Reservation
+
+<h2 class="text-center my-4">📄 Détails de votre réservation</h2>
+
+<div class="card shadow-lg p-4">
+    <div class="card-body">
+        <h5 class="card-title text-primary">✈️ Vol réservé</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Etat :</strong> @Model.Etat</li>
+            <li class="list-group-item"><strong>Départ :</strong> @Model.vol.depart</li>
+            <li class="list-group-item"><strong>Destination :</strong> @Model.vol.destination</li>
+            <li class="list-group-item">
+                <strong>Date de départ :</strong>
+                <span class="badge bg-primary p-2">
+                    @Model.vol.dateDepart.ToString("dd MMM yyyy - HH:mm")
+                </span>
+            </li>
+            <li class="list-group-item">
+                <strong>Date d'arrivée :</strong>
+                <span class="badge bg-primary p-2">
+                    @Model.vol.dateArrivee.ToString("dd MMM yyyy - HH:mm")
+                </span>
+            </li>
+            <li class="list-group-item"><strong>Prix :</strong> @Model.vol.prix DH</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Bouton Retour -->
+<div class="text-center mt-4">
+    <a asp-action="Index" asp-controller="Utilisateur" class="btn btn-secondary">
+        ⬅️ Retour à mes réservations
+    </a>
+</div>
+
+<!-- Bouton Annuler si la réservation est "en cours" -->
+@if (Model.Etat == "en cours")
+{
+    <div class="text-center mt-3">
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#annulationModal">
+            ❌ Annuler la réservation
+        </button>
+    </div>
+
+    <!-- Modal de confirmation -->
+    <div class="modal fade" id="annulationModal" tabindex="-1" aria-labelledby="annulationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="annulationModalLabel">⚠️ Confirmation d'annulation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p>Êtes-vous sûr de vouloir annuler cette réservation ? Cette action est irréversible.</p>
+                </div>
+                <div class="modal-footer">
+                    <form asp-action="AnnulerReservation" asp-controller="Utilisateur" method="post">
+                        <input type="hidden" name="id" value="@Model.Id" />
+                        <button type="submit" class="btn btn-danger">Oui, annuler</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non, revenir</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

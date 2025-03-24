@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using reservation_vols.Data;
-var builder = WebApplication.CreateBuilder(args);
-//var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
+using reservation_vols.Models;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
-//builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Récupérer la chaîne de connexion depuis appsettings.json
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
@@ -14,20 +16,36 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+//options.SignIn.RequireConfirmedAccount =
+//true).AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddDefaultTokenProviders() //  Ajoute les fournisseurs de jetons par défaut
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IEmailSender, FakeEmailSender>();
+
+//builder.Services.AddSingleton<IEmailSender, EmailSender>();
+
+//builder.Services.AddDefaultIdentity<Utilisateur>(options => options.SignIn.RequireConfirmedAccount = false)
+//    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
 builder.Services.AddRazorPages();
+
+// Supprimer cette ligne qui cause un conflit
+// builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+
+// Ajout des services nécessaires
+builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
-
-// Configure the HTTP request pipeline.
+// Configure le pipeline HTTP
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -35,11 +53,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();
-
+app.UseAuthentication(); // Important pour activer Identity
 app.UseAuthorization();
-app.MapRazorPages();
 
+app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

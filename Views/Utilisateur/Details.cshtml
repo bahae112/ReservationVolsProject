@@ -1,0 +1,69 @@
+﻿@model Vol
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <div class="card-body">
+            <h2 class="text-center text-primary mb-4">✈️ Détails du vol</h2>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>📍 Départ :</strong> @Model.depart</li>
+                <li class="list-group-item"><strong>📍 Arrivée :</strong> @Model.destination</li>
+                <li class="list-group-item">
+                    <strong>🕒 Heure de départ :</strong>
+                    <span class="badge bg-primary p-2">@Model.dateDepart.ToString("dd/MM/yyyy HH:mm")</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>🕒 Heure d'arrivée :</strong>
+                    <span class="badge bg-success p-2">@Model.dateArrivee.ToString("dd/MM/yyyy HH:mm")</span>
+                </li>
+                <li class="list-group-item"><strong>🛑 Places disponibles :</strong> @Model.nombrePalces</li>
+                <li class="list-group-item"><strong>💰 Prix :</strong> <span class="text-danger fw-bold">@Model.prix DH</span></li>
+            </ul>
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="text-center mt-4">
+                    <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                        ✅ Réserver maintenant
+                    </button>
+                </div>
+
+                <!-- Modal de confirmation -->
+                <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning text-white">
+                                <h5 class="modal-title" id="confirmationModalLabel">⚠️ Confirmer la réservation</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <p>Voulez-vous vraiment réserver ce vol ?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <form method="post" action="@Url.Action("ReserverVol", "Utilisateur")">
+                                    <input type="hidden" name="idVol" value="@Model.Id" />
+                                    <button type="submit" class="btn btn-success">Oui, réserver</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info text-center mt-3">
+                    <p>🔐 <a href="@Url.Action("Login", "Account")" class="text-decoration-none fw-bold">Connectez-vous</a> pour réserver.</p>
+                </div>
+            }
+
+            <!-- Bouton Retour -->
+            <div class="text-center mt-4">
+                <a asp-action="Index" asp-controller="Utilisateur" class="btn btn-secondary">
+                    ⬅️ Retour à la liste des vols
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

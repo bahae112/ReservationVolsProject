@@ -1,0 +1,81 @@
+﻿@model List<ListeVols>
+
+@{
+    // Vérifier si une recherche a été effectuée (paramètres dans l'URL)
+    bool rechercheEffectuee = Context.Request.Query.ContainsKey("date")
+                            || Context.Request.Query.ContainsKey("depart")
+                            || Context.Request.Query.ContainsKey("destination");
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-primary mb-4">✈️ Vols Disponibles</h2>
+
+    <!-- Formulaire de recherche -->
+    <div class="card shadow-lg p-4 mb-4">
+        <form asp-controller="Utilisateur" asp-action="SearchVols" method="get" class="row g-2">
+            <div class="col-md-3">
+                <input type="date" name="date" class="form-control" placeholder="📅 Date du vol" />
+            </div>
+            <div class="col-md-3">
+                <input type="text" name="depart" class="form-control" placeholder="📍 Lieu de départ" />
+            </div>
+            <div class="col-md-3">
+                <input type="text" name="destination" class="form-control" placeholder="📍 Lieu d'arrivée" />
+            </div>
+            <div class="col-md-3 d-grid">
+                <button type="submit" class="btn btn-primary">🔎 Rechercher</button>
+            </div>
+        </form>
+    </div>
+
+    @if (!Model.Any())
+    {
+            <div class="alert alert-warning text-center">
+                <p>🚨 Aucun vol disponible pour le moment.</p>
+            </div>
+    }
+    else
+    {
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead class="table-dark text-center">
+                            <tr>
+                                <th>📍 Départ</th>
+                                <th>📍 Arrivée</th>
+                                <th>🕒 Heure & Date de départ</th>
+                                <th>⚡ Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                        @foreach (var flight in Model)
+                        {
+                                    <tr>
+                                        <td>@flight.depart</td>
+                                        <td>@flight.destination</td>
+                                        <td>
+                                            <span class="badge bg-primary p-2">@flight.dateDepart.ToString("dd/MM/yyyy HH:mm")</span>
+                                        </td>
+                                        <td>
+                                            <a asp-action="Details" asp-route-id="@flight.Id" class="btn btn-info">
+                                                🔍 Voir détails
+                                            </a>
+                                        </td>
+                                    </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        @if (rechercheEffectuee)
+        {
+                    <!-- Afficher le bouton uniquement si une recherche a été faite -->
+                    <div class="text-center mt-4">
+                        <a href="@Url.Action("Index", "Utilisateur")" class="btn btn-secondary">
+                            🔄 Afficher tous les vols
+                        </a>
+                    </div>
+        }
+    }
+</div>

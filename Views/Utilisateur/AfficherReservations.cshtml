@@ -1,0 +1,58 @@
+﻿@model List<Reservation>
+
+@{
+    ViewData["Title"] = "Mes Réservations";
+}
+
+<h2 class="text-center my-4">✈️ Mes Réservations</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning text-center">
+        ❌ Vous n'avez encore réservé aucun vol.
+    </div>
+}
+else
+{
+    <table class="table table-striped table-hover shadow-sm rounded">
+        <thead class="table-dark">
+            <tr>
+                
+                <th>Départ</th>
+                <th>Destination</th>
+                <th>Date de départ</th>
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var reservation in Model)
+            {
+                <tr>
+                    
+                    <td>@reservation.vol.depart</td>
+                    <td>@reservation.vol.destination</td>
+                    <td>
+                        <span class="badge bg-primary p-2">
+                            @reservation.vol.dateDepart.ToString("dd MMM yyyy - HH:mm")
+                        </span>
+                    </td>
+                    <td>@reservation.Etat</td>
+                    <td>
+                        <a asp-action="InfosReservation"  asp-route-id="@reservation.Id"
+                           class="btn btn-outline-info btn-sm">
+                            📄 Détails
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<!-- Bouton Retour -->
+<div class="text-center mt-4">
+    <a asp-action="Index" asp-controller="Utilisateur" class="btn btn-secondary">
+        ⬅️ Retour à la liste des vols
+    </a>
+</div>

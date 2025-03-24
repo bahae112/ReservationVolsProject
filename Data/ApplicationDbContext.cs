@@ -20,8 +20,9 @@ namespace reservation_vols.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         { }
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<Gestionnaire> Gestionnaires { get; set; }
+
+
+        public DbSet<Utilisateur> Utilisateurs { get; set; }
         public DbSet<Vol> Vols { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
 
@@ -29,10 +30,42 @@ namespace reservation_vols.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Vol>().HasData(
+    new Vol
+    {
+        Id = 1,
+        nombrePalces = 150,
+        destination = "Paris",
+        depart = "Casablanca",
+        dateDepart = new DateTime(2025, 04, 15, 08, 30, 00),
+        dateArrivee = new DateTime(2025, 04, 15, 12, 00, 00),
+        prix = 1200
+    },
+    new Vol
+    {
+        Id = 2,
+        nombrePalces = 200,
+        destination = "New York",
+        depart = "Casablanca",
+        dateDepart = new DateTime(2025, 05, 10, 14, 00, 00),
+        dateArrivee = new DateTime(2025, 05, 10, 23, 45, 00),
+        prix = 4500
+    },
+    new Vol
+    {
+        Id = 3,
+        nombrePalces = 180,
+        destination = "Dubai",
+        depart = "Marrakech",
+        dateDepart = new DateTime(2025, 06, 20, 22, 15, 00),
+        dateArrivee = new DateTime(2025, 06, 21, 06, 30, 00),
+        prix = 3000
+    }
+);
 
-            // Configuration TPC : chaque classe héritée a sa propre table, sans table `Utilisateur`
-            modelBuilder.Entity<Client>().ToTable("Clients");
-            modelBuilder.Entity<Gestionnaire>().ToTable("Gestionnaires");
+
+
+
 
 
         }
