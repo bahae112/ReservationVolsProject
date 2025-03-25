@@ -1,0 +1,82 @@
+﻿@model IEnumerable<reservation_vols.Models.Reservation>
+
+@{
+    ViewData["Title"] = "Liste des réservations";
+}
+
+<p class="text-center text-light fs-3 p-4 bg-primary rounded shadow-lg border border-white">
+    📌 Liste des réservations
+</p>
+
+<!-- Formulaire de recherche multicritère (si nécessaire) -->
+<form asp-action="RechercherReservations" method="get" class="mb-4 d-flex flex-wrap justify-content-center align-items-center">
+    <input type="text" name="clientNom" class="form-control w-auto me-2" placeholder="Nom du client">
+    <input type="text" name="volDestination" class="form-control w-auto me-2" placeholder="Destination du vol">
+    <input type="date" name="dateReservation" class="form-control w-auto me-2">
+    <button type="submit" class="btn btn-light border border-primary shadow-sm">🔍 Rechercher</button>
+</form>
+
+<!-- Tableau des réservations -->
+<table class="table table-dark table-hover table-bordered">
+    <thead class="table-primary text-center">
+        <tr>
+            <th>ID</th>
+            <th>Client</th>
+            <th>Vol</th>
+            <th>Statut</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in Model)
+        {
+            <tr class="text-center align-middle">
+                <td>@reservation.Id</td>
+                <td>
+                    @reservation.client.Nom @reservation.client.Prenom
+                </td>
+                <td>
+                    @reservation.vol.destination
+                </td>
+                <td>
+                    @if (reservation.Statut == "En attente")
+                    {
+                        <span class="badge bg-warning">En attente</span>
+                    }
+                    else if (reservation.Statut == "Confirmée")
+                    {
+                        <span class="badge bg-success">Confirmée</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Annulée</span>
+                    }
+                </td>
+                <td>
+                    @if (reservation.Statut == "En attente")
+                    {
+                        <!-- Formulaire pour confirmer la réservation -->
+                        <form method="post" action="@Url.Action("Confirmer", "Reservation", new { id = reservation.Id })" style="display:inline;">
+                            <button type="submit" class="btn btn-success btn-sm">✔️ Confirmer</button>
+                        </form>
+
+                        <!-- Formulaire pour annuler la réservation -->
+                        <form method="post" action="@Url.Action("Annuler", "Reservation", new { id = reservation.Id })" style="display:inline;" onsubmit="return confirm('Voulez-vous vraiment annuler cette réservation ?');">
+                            <button type="submit" class="btn btn-danger btn-sm">❌ Annuler</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="badge badge-secondary">Réservation traitée</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Boutons pour ajouter et consulter les réservations -->
+<div class="text-center mt-3">
+    @* <a asp-action="Create" class="btn btn-primary">➕ Ajouter une réservation</a> *@
+    @* <a asp-action="AfficherStatistiques" class="btn btn-info ms-2">📊 Voir les Statistiques</a> *@
+</div>

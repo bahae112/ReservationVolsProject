@@ -1,0 +1,71 @@
+﻿@model List<Reservation>
+
+@{
+    ViewData["Title"] = "Mes Réservations";
+}
+
+<h2 class="text-center my-4">✈️ Mes Réservations</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning text-center">
+        ❌ Vous n'avez encore réservé aucun vol.
+    </div>
+}
+else
+{
+    <table class="table table-striped table-hover shadow-sm rounded">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>📍 Départ</th>
+                <th>📍 Destination</th>
+                <th>🕒 Date de départ</th>
+                <th>📌 Statut</th>
+                <th>⚡ Actions</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            @foreach (var reservation in Model)
+            {
+                <tr>
+                    <td>@reservation.vol.départ</td>
+                    <td>@reservation.vol.destination</td>
+                    <td>
+                        <span class="badge bg-primary p-2">
+                            @reservation.vol.dateDepart.ToString("dd MMM yyyy - HH:mm")
+                        </span>
+                    </td>
+                    <td>
+                        <span class="badge @(reservation.Statut == "Confirmée" ? "bg-success" : "bg-warning") p-2">
+                            @reservation.Statut
+                        </span>
+                    </td>
+                    <td>
+                        <a asp-action="InfosReservation" asp-route-id="@reservation.Id"
+                           class="btn btn-outline-info btn-sm">
+                            📄 Détails
+                        </a>
+
+                        @if (reservation.Statut == "En attente")
+                        {
+                            <form method="post" asp-action="AnnulerReservation" class="d-inline">
+                                <input type="hidden" name="id" value="@reservation.Id" />
+                                <button type="submit" class="btn btn-outline-danger btn-sm"
+                                        onclick="return confirm('Voulez-vous vraiment annuler cette réservation ?');">
+                                    ❌ Annuler
+                                </button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<!-- Bouton Retour -->
+<div class="text-center mt-4">
+    <a asp-action="Index" asp-controller="Utilisateur" class="btn btn-secondary">
+        ⬅️ Retour à la liste des vols
+    </a>
+</div>

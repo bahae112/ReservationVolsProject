@@ -1,0 +1,661 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\reservation_vols.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:reservation_vols.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\reservation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\reservation\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\reservation\\afficherstatistiques.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\reservation\\afficherstatistiques.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\vol\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\vol\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\vol\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\vol\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\vol\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\vol\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\vol\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\vol\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:models\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\vol\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\vol\\contacts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\utilisateur\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\utilisateur\\profil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\utilisateur\\infosreservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\utilisateur\\infosreservation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\utilisateur\\afficherreservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\utilisateur\\afficherreservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\utilisateur\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\utilisateur\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\utilisateur\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\utilisateur\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\controllers\\volcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:controllers\\volcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\controllers\\gestionnairecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:controllers\\gestionnairecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\models\\vol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:models\\vol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\gestionnaire\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\gestionnaire\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\data\\migrations\\20250324094406_gs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:data\\migrations\\20250324094406_gs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Migrations\\20250324093941_cws.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250324093941_cws.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Migrations\\20250324093253_tv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250324093253_tv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\utility\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:utility\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\utility\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:utility\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|c:\\users\\asus\\desktop\\reservationvolsproject\\reservation_vols.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{09A3C53A-341B-F073-13E0-F25553CEDF4A}|reservation_vols.csproj|solutionrelative:reservation_vols.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Vol\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Index.cshtml",
+              "RelativeToolTip": "Views\\Vol\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T01:04:16.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "afficherStatistiques.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Reservation\\afficherStatistiques.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservation\\afficherStatistiques.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Reservation\\afficherStatistiques.cshtml",
+              "RelativeToolTip": "Views\\Reservation\\afficherStatistiques.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T08:53:02.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Vol\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Vol\\Edit.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T01:04:15.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Vol\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Vol\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T01:04:13.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Vol\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Create.cshtml",
+              "RelativeToolTip": "Views\\Vol\\Create.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T01:04:11.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Reservation\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reservation\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Reservation\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reservation\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T08:47:47.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "reservation_vols.csproj",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\reservation_vols.csproj",
+              "RelativeDocumentMoniker": "reservation_vols.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\reservation_vols.csproj",
+              "RelativeToolTip": "reservation_vols.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-23T16:07:08.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwDEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T03:18:19.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Profil.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\Profil.cshtml",
+              "RelativeDocumentMoniker": "Views\\Utilisateur\\Profil.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\Profil.cshtml",
+              "RelativeToolTip": "Views\\Utilisateur\\Profil.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABwAAAB9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T00:47:09.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T00:39:19.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAwIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T22:22:56.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Utilisateur\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\Index.cshtml",
+              "RelativeToolTip": "Views\\Utilisateur\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABMAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T11:03:24.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAswNQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T23:05:52.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Utilisateur.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Models\\Utilisateur.cs",
+              "RelativeDocumentMoniker": "Models\\Utilisateur.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Models\\Utilisateur.cs",
+              "RelativeToolTip": "Models\\Utilisateur.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T22:53:45.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "Controllers\\ReservationController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T04:42:47.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Contacts.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Contacts.cshtml",
+              "RelativeDocumentMoniker": "Views\\Vol\\Contacts.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Vol\\Contacts.cshtml",
+              "RelativeToolTip": "Views\\Vol\\Contacts.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T02:57:09.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UtilisateurController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\UtilisateurController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UtilisateurController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\UtilisateurController.cs",
+              "RelativeToolTip": "Controllers\\UtilisateurController.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAkwLMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:34:09.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "InfosReservation.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\InfosReservation.cshtml",
+              "RelativeDocumentMoniker": "Views\\Utilisateur\\InfosReservation.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\InfosReservation.cshtml",
+              "RelativeToolTip": "Views\\Utilisateur\\InfosReservation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T00:49:27.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AfficherReservations.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\AfficherReservations.cshtml",
+              "RelativeDocumentMoniker": "Views\\Utilisateur\\AfficherReservations.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\AfficherReservations.cshtml",
+              "RelativeToolTip": "Views\\Utilisateur\\AfficherReservations.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T11:53:54.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Utilisateur\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Utilisateur\\Details.cshtml",
+              "RelativeToolTip": "Views\\Utilisateur\\Details.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T11:04:24.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAOYUAAAAAAAAAAAgwP4UAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-03-25T02:18:41.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAwF8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T22:32:26.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "VolController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\VolController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VolController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\VolController.cs",
+              "RelativeToolTip": "Controllers\\VolController.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAYwJwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T04:42:50.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GestionnaireController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\GestionnaireController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GestionnaireController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\GestionnaireController.cs",
+              "RelativeToolTip": "Controllers\\GestionnaireController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAmwBQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T04:50:25.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T00:41:58.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "Models\\Reservation.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Models\\Reservation.cs",
+              "RelativeToolTip": "Models\\Reservation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T05:50:45.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Vol.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Models\\Vol.cs",
+              "RelativeDocumentMoniker": "Models\\Vol.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Models\\Vol.cs",
+              "RelativeToolTip": "Models\\Vol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:12:12.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "20250324093941_cws.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Migrations\\20250324093941_cws.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250324093941_cws.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Migrations\\20250324093941_cws.cs",
+              "RelativeToolTip": "Migrations\\20250324093941_cws.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:39:43.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:10:40.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "20250324093253_tv.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Migrations\\20250324093253_tv.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250324093253_tv.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Migrations\\20250324093253_tv.cs",
+              "RelativeToolTip": "Migrations\\20250324093253_tv.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:33:13.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Gestionnaire\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Gestionnaire\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\Gestionnaire\\Index.cshtml",
+              "RelativeToolTip": "Views\\Gestionnaire\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T08:56:15.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T22:29:01.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-24T09:22:24.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20250324094406_gs.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Data\\Migrations\\20250324094406_gs.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20250324094406_gs.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Data\\Migrations\\20250324094406_gs.cs",
+              "RelativeToolTip": "Data\\Migrations\\20250324094406_gs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:44:07.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Utility\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Utility\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Utility\\EmailSender.cs",
+              "RelativeToolTip": "Utility\\EmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T03:51:14.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-24T08:56:08.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SD.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Utility\\SD.cs",
+              "RelativeDocumentMoniker": "Utility\\SD.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Utility\\SD.cs",
+              "RelativeToolTip": "Utility\\SD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T03:20:34.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T22:34:45.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "reservation_vols",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\reservation_vols.csproj",
+              "RelativeDocumentMoniker": "reservation_vols.csproj",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\ReservationVolsProject\\reservation_vols.csproj",
+              "RelativeToolTip": "reservation_vols.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-23T17:52:35.881Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

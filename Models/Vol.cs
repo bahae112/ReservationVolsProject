@@ -9,6 +9,6 @@
         public DateTime dateDepart { get; set; }
         public DateTime dateArrivee { get; set; }
         public float prix { get; set; }
-        public List<Reservation> Reservations { get; set; }
+        public List<Reservation> Reservations { get; set; } = new List<Reservation>();
     }
 }

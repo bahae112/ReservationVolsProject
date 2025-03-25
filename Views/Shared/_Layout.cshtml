@@ -7,41 +7,140 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/reservation_vols.styles.css" asp-append-version="true" />
+    <style>
+        .navbar-custom {
+            background: linear-gradient(135deg, #4A4A4A, #800080); /* Dégradé de couleurs */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: white !important;
+            letter-spacing: 1px;
+        }
+
+            .navbar-brand span {
+                color: #FFD700; /* Doré pour une touche premium */
+            }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+            .nav-link:hover {
+                color: #FFD700 !important;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+        .navbar-toggler {
+            border: none;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+
+        .btn-custom {
+            background: #FFD700;
+            color: #4A4A4A;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+            .btn-custom:hover {
+                background: #FFC107;
+                color: black;
+            }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">reservation_vols</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span>Fly</span>Air
+                </a>
+
+                <!-- Bouton de menu responsive -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <!-- Contenu du menu -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Utilisateur" asp-action="Index">✈️ Vols</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (User.IsInRole("Client"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Utilisateur" asp-action="AfficherReservations">📋 Mes réservations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Utilisateur" asp-action="Profil">👤 Mon Profil</a>
+                                </li>
+                            }
+                            else if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Vol" asp-action="Index">📝 Détails</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Reservation" asp-action="afficherStatistiques">📊 Statistiques</a>
+                                </li>
+                                
+                            }
+                        }
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-controller="Vol" asp-action="Contacts">📞 Contacts</a>
                         </li>
                     </ul>
+
+                    <!-- Connexion / Déconnexion -->
                     <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="bg-dark text-white text-center py-3 mt-4">
         <div class="container">
-            &copy; 2025 - reservation_vols - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <p class="mb-1">&copy; 2025 - <strong>Réservation Vols</strong></p>
+
+            <p>
+                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none text-warning">Politique de confidentialité</a> |
+                <a asp-area="" asp-controller="Home" asp-action="Contact" class="text-decoration-none text-warning">Contact</a> |
+                <a asp-area="" asp-controller="Home" asp-action="MentionsLegales" class="text-decoration-none text-warning">Mentions Légales</a>
+            </p>
+
+            <!-- Icônes réseaux sociaux -->
+            <p>
+                <a href="https://facebook.com" target="_blank" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
+            </p>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
