@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9xrtLk5g6Y2Xep7LB3jp3h+tagphTYH3uazzMq9U+nc=",
+  "Hash": "zV2w526An0gm1DioHbvOGc8cwSEAUuXDjC9ODtUiwdQ=",
   "Source": "reservation_vols",
   "BasePath": "_content/reservation_vols",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\pc\\Desktop\\reservation_vols\\reservation_vols\\reservation_vols\\wwwroot\\images\\avion1.jpeg",
+      "SourceId": "reservation_vols",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pc\\Desktop\\reservation_vols\\reservation_vols\\reservation_vols\\wwwroot\\",
+      "BasePath": "_content/reservation_vols",
+      "RelativePath": "images/avion1.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\avion1.jpeg"
     },
     {
       "Identity": "C:\\Users\\pc\\Desktop\\reservation_vols\\reservation_vols\\reservation_vols\\wwwroot\\js\\site.js",

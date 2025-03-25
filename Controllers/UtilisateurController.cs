@@ -11,19 +11,22 @@ using System.Threading.Tasks;
 
 namespace reservation_vols.Controllers
 {
-    [Authorize] // Assure que seuls les utilisateurs connectés peuvent accéder au contrôleur
+    // Assure que seuls les utilisateurs connectés peuvent accéder au contrôleur
     public class UtilisateurController : Controller
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-        public UtilisateurController(ApplicationDbContext context, UserManager<IdentityUser> userManager)
+        public UtilisateurController(ApplicationDbContext context, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             _context = context;
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         // Liste des vols disponibles
+
         public async Task<IActionResult> Index()
         {
             var vols = await _context.Vols
@@ -87,6 +90,7 @@ namespace reservation_vols.Controllers
 
         // Réserver un vol
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> ReserverVol(int idVol)
         {
             var user = await _userManager.GetUserAsync(User);
@@ -108,6 +112,7 @@ namespace reservation_vols.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         // Afficher les réservations par ordre décroissant de la date
         public async Task<IActionResult> AfficherReservations()
         {
@@ -129,6 +134,7 @@ namespace reservation_vols.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         // Afficher les détails d'une réservation
         public async Task<IActionResult> InfosReservation(int id)
         {
@@ -146,6 +152,7 @@ namespace reservation_vols.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult AnnulerReservation(int id)
         {
             var reservation = _context.Reservations.Find(id);
@@ -165,7 +172,81 @@ namespace reservation_vols.Controllers
             return RedirectToAction("Index", "Utilisateur");
         }
 
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Profil()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return NotFound();
+            }
 
+            var model = new ProfilViewModel
+            {
+                Email = user.Email
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> ModifierProfil(ProfilViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View("Profil", model);
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return NotFound();
+
+            bool emailModifie = false, motDePasseModifie = false;
+
+            // Vérifier si l'email doit être modifié
+            if (!string.IsNullOrEmpty(model.Email) && model.Email != user.Email)
+            {
+                var token = await _userManager.GenerateChangeEmailTokenAsync(user, model.Email);
+                var result = await _userManager.ChangeEmailAsync(user, model.Email, token);
+                if (result.Succeeded)
+                {
+                    emailModifie = true;
+                }
+                else
+                {
+                    TempData["Error"] = "Erreur lors de la mise à jour de l'email.";
+                    return RedirectToAction("Profil");
+                }
+            }
+
+            // Vérifier si le mot de passe doit être modifié
+            if (!string.IsNullOrEmpty(model.AncienMotDePasse) && !string.IsNullOrEmpty(model.NouveauMotDePasse))
+            {
+                var result = await _userManager.ChangePasswordAsync(user, model.AncienMotDePasse, model.NouveauMotDePasse);
+                if (result.Succeeded)
+                {
+                    motDePasseModifie = true;
+                }
+                else
+                {
+                    TempData["Error"] = "Ancien mot de passe incorrect ou nouveau mot de passe invalide.";
+                    return RedirectToAction("Profil");
+                }
+            }
+
+            // Rafraîchir la connexion si une modification a eu lieu
+            if (emailModifie || motDePasseModifie)
+            {
+                await _signInManager.RefreshSignInAsync(user);
+                TempData["Message"] = "Profil mis à jour avec succès !";
+            }
+            else
+            {
+                TempData["Error"] = "Aucune modification détectée.";
+            }
+
+            return RedirectToAction("Profil");
+        }
 
     }
 }

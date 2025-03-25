@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\pc\\Desktop\\reservation_vols\\reservation_vols\\reservation_vols\\wwwroot\\images\\avion1.jpeg",
+      "PackagePath": "staticwebassets\\images\\avion1.jpeg"
+    },
+    {
       "Id": "C:\\Users\\pc\\Desktop\\reservation_vols\\reservation_vols\\reservation_vols\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

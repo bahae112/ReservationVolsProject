@@ -12,7 +12,7 @@ using reservation_vols.Data;
 namespace reservation_vols.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250324192906_mig1")]
+    [Migration("20250324224137_mig1")]
     partial class mig1
     {
         /// <inheritdoc />

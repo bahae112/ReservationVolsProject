@@ -1,0 +1,44 @@
+﻿@model ProfilViewModel
+
+@{
+    ViewData["Title"] = "Mon Profil";
+}
+
+<h2 class="text-center my-4">👤 Mon Profil</h2>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success text-center">@TempData["Message"]</div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger text-center">@TempData["Error"]</div>
+}
+
+<div class="container">
+    <form asp-action="ModifierProfil" method="post">
+        <div class="mb-3">
+            <label class="form-label">Nouvel Email 📧</label>
+            <input asp-for="Email" class="form-control" placeholder="Entrez votre nouvel email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <hr />
+
+        <h4>Modifier le mot de passe 🔒</h4>
+        <div class="mb-3">
+            <label class="form-label">Ancien Mot de Passe</label>
+            <input asp-for="AncienMotDePasse" type="password" class="form-control" placeholder="Entrez votre ancien mot de passe" />
+            <span asp-validation-for="AncienMotDePasse" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Nouveau Mot de Passe</label>
+            <input asp-for="NouveauMotDePasse" type="password" class="form-control" placeholder="Entrez votre nouveau mot de passe" />
+            <span asp-validation-for="NouveauMotDePasse" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Modifier</button>
+    </form>
+</div>

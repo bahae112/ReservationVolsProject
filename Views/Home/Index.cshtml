@@ -1,8 +1,68 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Accueil - Fly Air";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Bannière d'accueil -->
+<header class="bg-primary text-white text-center py-5">
+    <h1 class="display-4">Bienvenue sur <span class="fw-bold">Fly Air</span> ✈️</h1>
+    <p class="lead">Réservez vos vols facilement et voyagez en toute sérénité.</p>
+    <a asp-action="Index" asp-controller="Utilisateur" class="btn btn-light btn-lg mt-3">📅 Voir les vols</a>
+</header>
+
+<!-- Section Présentation -->
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Pourquoi choisir <span class="text-primary">Fly Air</span> ?</h2>
+            <p>
+                Nous offrons une expérience de voyage inoubliable avec des vols confortables, des prix compétitifs
+                et un service client exceptionnel. Découvrez notre sélection de vols vers les meilleures destinations.
+            </p>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">✅ Réservations simples et rapides</li>
+                <li class="list-group-item">✅ Tarifs avantageux</li>
+                <li class="list-group-item">✅ Assistance 24/7</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <img src="images/avion1.jpeg" class="img-fluid rounded shadow" alt="Avion Fly Air">
+        </div>
+    </div>
+</section>
+
+<!-- Témoignages -->
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center">Nos voyageurs parlent de nous ✈️</h2>
+        <div class="row text-center mt-4">
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <p class="card-text">🌟🌟🌟🌟🌟 "Service impeccable et vol confortable. Je recommande !" – Sarah M.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <p class="card-text">🌟🌟🌟🌟 "Très bons prix et réservation rapide." – Ahmed K.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <p class="card-text">🌟🌟🌟🌟🌟 "J'adore Fly Air ! Un vrai plaisir de voyager avec eux." – Léa R.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Réservation -->
+<section class="text-center my-5">
+    <h2 class="text-primary">Prêt à voyager ?</h2>
+    <p>Réservez votre vol dès maintenant et partez à l'aventure !</p>
+    <a asp-action="Index" asp-controller="Utilisateur" class="btn btn-success btn-lg">🚀 Trouver un vol</a>
+</section>
