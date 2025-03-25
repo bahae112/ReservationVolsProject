@@ -14,6 +14,8 @@ namespace reservation_vols.Controllers
             _db = db;
         }
 
+        [Authorize (Roles = "Admin")]
+
         public IActionResult Index()
         {
             List<Vol> volList = _db.Vols.ToList();
@@ -22,6 +24,7 @@ namespace reservation_vols.Controllers
 
         //[Authorize]
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -29,6 +32,7 @@ namespace reservation_vols.Controllers
 
         [HttpPost]
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Create(Vol vol)
         {
             Console.WriteLine($"Vol reçu: Id = {vol.Id}, Nombre Places = {vol.nombrePalces}, Destination = {vol.destination}, Départ = {vol.départ}, Date Départ = {vol.dateDepart}, Date Arrivée = {vol.dateArrivee}, Prix = {vol.prix}");
@@ -54,6 +58,7 @@ namespace reservation_vols.Controllers
             return View(vol);
         }
 
+        [Authorize(Roles = "Admin")]
 
         public IActionResult Edit(int? id)
         {
@@ -72,6 +77,8 @@ namespace reservation_vols.Controllers
         }
 
         [HttpPost]
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(Vol vol)
         {
             if (ModelState.IsValid)
@@ -83,6 +90,7 @@ namespace reservation_vols.Controllers
             return View(vol);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
@@ -99,7 +107,10 @@ namespace reservation_vols.Controllers
             return View(vol);
         }
 
+
         [HttpPost, ActionName("Delete")]
+
+        [Authorize(Roles = "Admin")]
         public IActionResult DeletePost(int? id)
         {
             Vol vol = _db.Vols.Find(id);
@@ -113,6 +124,8 @@ namespace reservation_vols.Controllers
             return RedirectToAction("Index");
         }
 
+
+        //[Authorize(Roles = "Admin")]
         public IActionResult RechercherVolsMulticriteres(string depart, string destination, DateTime? dateDepart, DateTime? dateArrivee, float? prixMin, float? prixMax, int? places)
         {
             var vols = _db.Vols.AsQueryable(); // Récupérer tous les vols
@@ -141,11 +154,16 @@ namespace reservation_vols.Controllers
             return View("Index", vols.ToList());
         }
 
+        public IActionResult Contacts()
+        {
+            return View();
+        }
+
         //public IActionResult afficherStatistiques()
         //{
         //    var totalVols = _context.Vols.Count();
         //    var totalReservations = _context.Reservations.Count();
-            
+
         //    // Supposons qu'une annulation est une réservation supprimée
         //    var totalAnnulations = _context.Reservations.Where(r => r.clientId == null).Count();
 

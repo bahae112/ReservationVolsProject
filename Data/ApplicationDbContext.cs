@@ -9,8 +9,7 @@ namespace reservation_vols.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<Gestionnaire> Gestionnaires { get; set; }
+        public DbSet<Utilisateur> Utilisateurs { get; set; }
         public DbSet<Vol> Vols { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
 
@@ -18,11 +17,27 @@ namespace reservation_vols.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configuration TPC : chaque classe héritée a sa propre table
-            modelBuilder.Entity<Client>().ToTable("Clients");
-            modelBuilder.Entity<Gestionnaire>().ToTable("Gestionnaires");
+            //modelBuilder.Entity<Utilisateur>().HasData(
+            //    new Utilisateur
+            //    {
+            //        //Id = 1,
+            //        Nom = "Dupont",
+            //        Prenom = "Jean",
+            //        Email = "jean.dupont@example.com",
+            //        CIN = "A123456",
+            //        Role = "client"
+            //    },
+            //    new Utilisateur
+            //    {
+            //        //Id = 2,
+            //        Nom = "Martin",
+            //        Prenom = "Marie",
+            //        Email = "marie.martin@example.com",
+            //        CIN = "A123457",
+            //        Role = "client"
+            //    }
+            //);
 
-            // Insertion de données initiales pour la table Vols
             modelBuilder.Entity<Vol>().HasData(
                 new Vol
                 {
@@ -46,20 +61,17 @@ namespace reservation_vols.Data
                 }
             );
 
-            
-
-            // Insertion de données initiales pour les Réservations (commentée)
             //modelBuilder.Entity<Reservation>().HasData(
             //    new Reservation
             //    {
             //        Id = 1,
-            //        clientId = "C1",
+            //        clientId = "1",
             //        volId = 1
             //    },
             //    new Reservation
             //    {
             //        Id = 2,
-            //        clientId = "C2",
+            //        clientId = "2",
             //        volId = 2
             //    }
             //);

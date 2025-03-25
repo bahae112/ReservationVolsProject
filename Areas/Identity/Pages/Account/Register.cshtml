@@ -12,56 +12,125 @@
             <h2>Create a new account.</h2>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                 <label asp-for="Input.Email">Email</label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <label asp-for="Input.Password">Password</label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select" id="roleSelect">
+                    <option disabled selected>-- Select a Role --</option>
+                </select>
+                <label asp-for="Input.Role">Role</label>
+            </div>
+
+            <!-- Champs pour Client -->
+            <div id="clientFields" style="display: none;">
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Nom" />
+                    <label>Nom</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Prénom" />
+                    <label>Prénom</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="CIN" />
+                    <label>CIN</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Type de Client" />
+                    <label>Type de Client</label>
+                </div>
+            </div>
+
+            <!-- Champs pour Admin -->
+            <div id="adminFields" style="display: none;">
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Nom" />
+                    <label>Nom</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="Prénom" />
+                    <label>Prénom</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" placeholder="CIN" />
+                    <label>CIN</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" id="adminCode" class="form-control" placeholder="Admin Code" />
+                    <label for="adminCode">Admin Code</label>
+                    <span id="adminCodeError" class="text-danger" style="display: none;">Invalid Admin Code</span>
+                </div>
+                <div id="adminExtraFields" style="display: none;">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" placeholder="Code Administratif" />
+                        <label>Code Administratif</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" type="date" />
+                        <label>Année de Recrutement</label>
+                    </div>
+                </div>
+            </div>
+
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
     </div>
 </div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        const validAdminCode = "1234";
+
+        document.getElementById("roleSelect").addEventListener("change", function () {
+            let role = this.value;
+            document.getElementById("clientFields").style.display = (role === "Client") ? "block" : "none";
+            document.getElementById("adminFields").style.display = (role === "Admin") ? "block" : "none";
+            document.getElementById("adminExtraFields").style.display = "none";
+            document.getElementById("adminCodeError").style.display = "none";
+        });
+
+        document.getElementById("adminCode").addEventListener("input", function () {
+            if (this.value.trim() === validAdminCode) {
+                document.getElementById("adminExtraFields").style.display = "block";
+                document.getElementById("adminCodeError").style.display = "none";
+            } else {
+                document.getElementById("adminExtraFields").style.display = "none";
+                document.getElementById("adminCodeError").style.display = "block";
+            }
+        });
+
+        document.getElementById("registerForm").addEventListener("submit", function (event) {
+            let role = document.getElementById("roleSelect").value;
+            let adminCodeInput = document.getElementById("adminCode").value.trim();
+            let isValid = true;
+
+            if (role === "Admin" && adminCodeInput !== validAdminCode) {
+                document.getElementById("adminCodeError").textContent = "Invalid Admin Code.";
+                document.getElementById("adminCodeError").style.display = "block";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Empêcher l'envoi du formulaire si le code est incorrect
+            }
+        });
+    </script>
 }
